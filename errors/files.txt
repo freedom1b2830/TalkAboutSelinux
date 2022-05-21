@@ -1,0 +1,8 @@
+[root@archlinux ~]# readlog.sh |grep chrome_crashpad_handler
+avc:  denied  { execute } for comm="chrome" name="chrome_crashpad_handler" dev="dm-0" ino=10187902 scontext=user_u:user_r:chromium_t tcontext=system_u:object_r:usr_t tclass=file permissive=0
+
+[root@archlinux ~]# ls -laZ /opt/google/chrome/chrome_crashpad_handler
+-rwxr-xr-x. 1 root root system_u:object_r:usr_t 1181912 мая 16 20:21 /opt/google/chrome/chrome_crashpad_handler
+
+[root@archlinux ~]# file /opt/google/chrome/chrome_crashpad_handler
+/opt/google/chrome/chrome_crashpad_handler: ELF 64-bit LSB pie executable, x86-64, version 1 (SYSV), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, for GNU/Linux 3.2.0, BuildID[sha1]=12c74b9c958474e199dd064c9b8e18993aac973f, stripped
